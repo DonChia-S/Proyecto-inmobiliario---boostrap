@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+}
+
+.bg-color{
+    background-color: #000d1d;
+}
+
+form{
+    font-size: 3vh;
+    background-color: rgba(255,255,255, 1.0);
+    border-radius: 5vh;
+    padding: 3.5%;
+}
+
+h1{
+    padding: 20px 0;
+}
+
+#sesion{
+    height: 95vh;
+    background-image: linear-gradient(
+        rgba(255, 227, 68), 
+      rgba(255, 217, 0)), 
+    url(./img/fondo-1.jpg);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 217, 0, 0.75);
+    background-size: cover;
+    background-position: top;
+    padding: 3% 0;
+}
+
+#registro{
+    height: auto;
+    background-image: linear-gradient(
+        rgba(255, 227, 68), 
+      rgba(255, 217, 0)), 
+    url(./img/fondo-1.jpg);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 217, 0, 0.75);
+    background-size: cover;
+    background-position: top;
+    padding: 2% 0;
+}
+
+#emailHelp{
+    padding: 0;
+    margin-top: 1px;
+}
