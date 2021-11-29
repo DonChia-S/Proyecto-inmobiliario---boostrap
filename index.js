@@ -37,7 +37,7 @@ function registrarPersona(){
         documento: documento,
         correo: correo,
         telefono: telefono,
-        rolId: '61993debe7e1d30324971740'
+        rolId: "61993debe7e1d30324971740"
     };
 
     fetch(url, {
@@ -77,14 +77,11 @@ function registrarPersona(){
     })
   })()
   
-  function consultarRol(id){
+  async function consultarRol(id){
     let url = `http://localhost:3000//rols/${id}`;
-    let pet = fetch(url, { method: 'GET',})
-    pet.then(res => res.json())
-    .then(mensaje => {
-       rol = mensaje
-       return rol;
-    })
+    let pet = await fetch(url, { method: 'GET',});
+    let result = await pet.json();
+    return result.nombre
   }
   function iniciarPersona(){
     alert('se ha enviado correctamente')
@@ -97,6 +94,7 @@ function registrarPersona(){
       clave: password,
     };
     
+
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(datos),
@@ -106,7 +104,9 @@ function registrarPersona(){
   }).then(res => res.json())
   .then(mensaje => {
     console.log(mensaje)
-      console.log(consultarRol(mensaje.datos.rol))
+    consultarRol(mensaje.datos.rol).then(r => {
+      console.log(r)
+    })
   })
 
 }
